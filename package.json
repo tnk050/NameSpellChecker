@@ -1,0 +1,24 @@
+{
+  "name": "namespellchecker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tnk050/NameSpellChecker.git"
+  },
+  "author": "tnk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tnk050/NameSpellChecker/issues"
+  },
+  "homepage": "https://github.com/tnk050/NameSpellChecker#readme",
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.48",
+    "eslint": "^8.17.0",
+    "typescript": "^4.7.3"
+  }
+}
