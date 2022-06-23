@@ -195,7 +195,7 @@ export default function convertRomanToKana(original: string): string {
   let index = 0;
   const len = str.length;
   let node = tree;
-  const push = (char, toRoot = true) => {
+  const push = (char: string, toRoot = true) => {
     result += char;
     tmp = '';
     node = toRoot ? tree : node;

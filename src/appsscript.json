@@ -1,15 +1,9 @@
 {
   "timeZone": "Asia/Tokyo",
-  "dependencies": {
-    "libraries": [
-      {
-        "userSymbol": "CheckName",
-        "version": "0",
-        "libraryId": "12Q0vEXFia8IpJBeDZ2x2wbA8wMD6ZTdxkrX0d26BebkXHXUjZKQaxL4B",
-        "developmentMode": true
-      }
-    ]
-  },
   "exceptionLogging": "STACKDRIVER",
-  "runtimeVersion": "V8"
+  "runtimeVersion": "V8",
+  "webapp": {
+    "executeAs": "USER_DEPLOYING",
+    "access": "MYSELF"
+  }
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <base target="_top" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name spell checker</title>
+  </head>
+  <body>
+    <h1>Name spell checker</h1>
+    <form method="post" action="<?= url ?>">
+      <textarea
+        id="input"
+        name="input"
+        rows="10"
+        cols="30"
+        placeholder="名前を入力"
+      ></textarea>
+      <input type="checkbox" id="include-title" name="include-title" checked />
+      <label for="include-title">先頭にタイトル行を含む</label>
+      <input type="checkbox" id="show-caution" name="show-caution" />
+      <label for="show-caution">リストで照合した名前も表示する</label>
+      <input type="submit" value="スペルを確認" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <base target="_top" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name spell checker</title>
+  </head>
+  <body>
+    <h1>Result</h1>
+    <h2>エラー</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>フリガナ</th>
+          <th>Name</th>
+          <th>エラー内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <? if(errorList.size){
+          for(let [key,item] of errorList){ ?>
+        <tr>
+          <td><?= key ?></td>
+          <td><?= item.nameJpn ?></td>
+          <td><?= item.nameEng ?></td>
+          <td><?= item.errMsg ?></td>
+        </tr>
+        <? }}else{ ?>
+        <tr>
+          <th colspan="4">エラーは有りませんでした</th>
+        </tr>
+        <? } ?>
+      </tbody>
+    </table>
+  </body>
+</html>

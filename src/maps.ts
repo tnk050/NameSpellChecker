@@ -1,4 +1,4 @@
-const nomList = new Map([
+const nameList: NameList = new Map([
   ['アトキンソン', ['ATKINSON']],
   ['アンドウ', ['ANDO']],
   ['イシヅカ', ['ISHIZUKA']],
@@ -54,9 +54,6 @@ const nomList = new Map([
   ['ホウライ', ['HORAI']],
   ['ホンマ', ['HOMMA']],
   ['モンデン', ['MONDEN']],
-]);
-
-const prenomList = new Map([
   ['イチロウ', ['Ichiro']],
   ['エイイチロウ', ['Eiichiro']],
   ['エツサブロウ', ['Etsusaburo']],
@@ -157,4 +154,4 @@ const prenomList = new Map([
   ['アンドリュー', ['Andrew']],
 ]);
 
-export { nomList, prenomList };
+export { nameList };
