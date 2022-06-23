@@ -40,10 +40,10 @@ export function createErrorList(
   inputList: InputList,
   resultList: ResultList
 ): ErrorList {
-  const nomUpperError = 'NOMが大文字ではありません';
-  const prenomUpperError = 'prenomの大/小文字表記が正しくありません';
-  const nomSpellError = '苗字とNOMのつづりが違います';
-  const prenomSpellError = '名前とprenomのつづりが違います';
+  const nomUpperError = "NOMが大文字ではありません";
+  const prenomUpperError = "prenomの大/小文字表記が正しくありません";
+  const nomSpellError = "苗字とNOMのつづりが違います";
+  const prenomSpellError = "名前とprenomのつづりが違います";
   const errorList = new Map();
   resultList.forEach((result, key) => {
     const {
@@ -57,10 +57,10 @@ export function createErrorList(
     !correctPreNomUpper && errAry.push(prenomUpperError);
     !listedNomSpell && errAry.push(nomSpellError);
     !listedPrenomSpell && errAry.push(prenomSpellError);
-    const errMsg = errAry.join('\n');
+    const errMsg = errAry.join(", ");
     const names = inputList.get(key)!;
-    const nameJpn = names.myoji + ' ' + names.namae;
-    const nameEng = names.nom + ' ' + names.prenom;
+    const nameJpn = names.myoji + " " + names.namae;
+    const nameEng = names.nom + " " + names.prenom;
     errorList.set(key, { nameJpn, nameEng, errMsg });
   });
   return errorList;
@@ -82,13 +82,13 @@ export function createCautionList(
       const names = inputList.get(key)!;
       const nameJpn = names.myoji;
       const nameEng = names.nom;
-      cautionList.set(key + '苗字', { nameJpn, nameEng });
+      cautionList.set(key + "苗字", { nameJpn, nameEng });
     }
     if (!matchedPrenomSpell && listedPrenomSpell) {
       const names = inputList.get(key)!;
       const nameJpn = names.namae;
       const nameEng = names.prenom;
-      cautionList.set(key + '名前', { nameJpn, nameEng });
+      cautionList.set(key + "名前", { nameJpn, nameEng });
     }
   });
   return cautionList;
