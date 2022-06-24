@@ -9,18 +9,29 @@
   <body>
     <h1>Name spell checker</h1>
     <form method="post" action="<?= url ?>">
-      <textarea
-        id="input"
-        name="input"
-        rows="10"
-        cols="30"
-        placeholder="名前を入力"
-      ></textarea>
-      <input type="checkbox" id="include-title" name="include-title" checked />
-      <label for="include-title">先頭にタイトル行を含む</label>
-      <input type="checkbox" id="show-caution" name="show-caution" />
-      <label for="show-caution">リストで照合した名前も表示する</label>
-      <input type="submit" value="スペルを確認" />
+      <div class="input-text">
+        <textarea
+          id="input"
+          name="input"
+          rows="20"
+          cols="50"
+          placeholder="名前を入力"
+        ></textarea>
+      </div>
+      <div class="input-checkbox">
+        <input
+          type="checkbox"
+          id="include-title"
+          name="include-title"
+          checked
+        />
+        <label for="include-title">先頭にタイトル行を含む</label>
+        <input type="checkbox" id="show-caution" name="show-caution" />
+        <label for="show-caution">リストで照合した名前も表示する(未実装)</label>
+      </div>
+      <div class="input-submit">
+        <input type="submit" value="スペルを確認" />
+      </div>
     </form>
   </body>
 </html>
